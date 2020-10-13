@@ -17,16 +17,16 @@ export default class screen2 extends Component {
             placeholder="ini Password"
             onChangeText={(text) => this.setState({SendData: text})}
           />
+          <Text
+            onPress={() =>
+              this.props.navigation.navigate('Screen3', {
+                Send: this.state.SendData,
+              })
+            }
+            style={styles.send}>
+            Kirim Data
+          </Text>
         </View>
-        <Text
-          onPress={() =>
-            this.props.navigation.navigate('Screen3', {
-              Send: this.state.SendData,
-            })
-          }
-          style={styles.send}>
-          Kirim Data
-        </Text>
       </View>
     );
   }
